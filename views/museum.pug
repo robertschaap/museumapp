@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+  main(role='main')
+    section
+      h2= query[0].name
+      p= query[0].location
+      p Overcome against law inexpedient holiest enlightenment eternal-return selfish sexuality revaluation free insofar. Virtues good noble holiest transvaluation insofar hope contradict depths battle of noble. Value love faith insofar chaos against decrepit decrepit god suicide reason.
+      p Merciful suicide grandeur chaos christianity spirit christianity intentions madness battle disgust depths. Transvaluation faith passion society love will marvelous sea convictions marvelous overcome faith pinnacle endless. Hope disgust dead derive play insofar justice derive. Oneself aversion pious salvation against ideal inexpedient strong law mountains fearful snare. Strong deceptions insofar superiority fearful madness enlightenment selfish faithful christianity. Ultimate against faithful decieve hope deceptions endless superiority disgust ultimate evil inexpedient prejudice inexpedient. Virtues justice deceptions horror abstract holiest joy moral fearful gains value contradict moral.
+      h3 Artworks
+      ul
+      each entry in query[0].artworks
+        li
+          a(href='/artworks/'+entry.dataValues.id)= entry.dataValues.name
+            span(class="secondary")= entry.dataValues.artist

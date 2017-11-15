@@ -1,0 +1,35 @@
+extends layout.pug
+
+append navigation
+  a(href='/admin/logout') Logout
+
+block content
+  main(role='main')
+    section
+      h2 Add Museum
+      form(action='/museums' method='post')
+        label
+          | Name
+        input(type='text' name='name')
+        label
+          | Location
+        input(type='text' name='location')
+        button(type='submit') Save
+
+      h2 Add Artwork
+      form(action='/artworks' method='post')
+        label
+          | Title
+        input(type='text' name='name')
+        label
+          | Artist
+        input(type='text' name='artist')
+        label
+          | Location
+        select(name='location')
+          each entry in museums
+            option(value=entry.id)= entry.name
+        button(type='submit') Save
+
+      if message
+        p(class='error')= message

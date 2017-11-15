@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  main(role='main')
+    section
+      h2 Artworks
+      p Overcome against law inexpedient holiest enlightenment eternal-return selfish sexuality revaluation free insofar. Virtues good noble holiest transvaluation insofar hope contradict depths battle of noble. Value love faith insofar chaos against decrepit decrepit god suicide reason.
+      ul
+      each entry in query
+        li
+          a(href='/artworks/'+entry.id)= entry.name
+            span(class='secondary')= entry.artist

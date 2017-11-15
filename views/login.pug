@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+  main(role='main')
+    section
+      h2 Login
+      form(action='/admin/login' method='post')
+        label
+          | Name
+        input(type='text' name='name')
+        label
+          | Password
+        input(type='password' name='password')
+        button(type='submit') Login
+      p= message
