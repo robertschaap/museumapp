@@ -6,7 +6,7 @@ HTML5 | CSS3 | JavasScript | Node.js | Express | Pug | PostgreSQL | Sequelize
 Express-Session | Connect-Session-Sequelize | Body-Parser
 
 ### Scope
-##### What was designed to do
+##### What it was designed to do
 + Use REST routing
 + Use query parameters to link to pages and to populate click-through links
 + Use a light version of the MVC architecture:

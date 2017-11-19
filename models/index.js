@@ -24,9 +24,9 @@ Artworks.belongsTo(Museums, { foreignKey: { allowNull: false }, onDelete: 'CASCA
 sequelize.sync({ force: true }).then(() => {
     Museums.create({ name: 'Musée du Louvre', location: 'Paris' })
     .then(output => {
-        output.createArtwork({ name: 'Mona Lisa', artist: 'Leonardo da Vinci' })
-        output.createArtwork({ name: 'Venus de Milo', artist: 'Alexandros of Antioch' })
-        output.createArtwork({ name: 'The Coronation of Napoleon', artist: 'Jaques-Louis David' })
+        output.createArtwork({ name: 'Mona Lisa', artist: 'Leonardo da Vinci' });
+        output.createArtwork({ name: 'Venus de Milo', artist: 'Alexandros of Antioch' });
+        output.createArtwork({ name: 'The Coronation of Napoleon', artist: 'Jaques-Louis David' });
     })
     Museums.create({ name: 'Stedelijk Museum', location: 'Amsterdam' })
     .then(output => output.createArtwork({ name: 'Composition XII', artist: 'Theo van Doesburg' }))
