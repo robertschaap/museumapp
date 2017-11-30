@@ -1,114 +1,99 @@
-/*Definitions*/
-
-
 /*Global Styles*/
-:root {
-    --mainColor: #333;
-}
 html {
-    box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 *, *:before, *:after {
-    box-sizing: inherit;
-}
+  box-sizing: inherit; }
+
 body {
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-weight: 300;
-    margin: 0 auto;
-    width: 60%;
-    color: var(--mainColor);
-}
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 300;
+  margin: 0 auto;
+  width: 60%;
+  color: #333; }
+
 main {
-    padding: 3rem 0rem;
-}
+  padding: 3rem 0rem; }
+
 h1, h2, h3 {
-    font-weight: 200;
-    padding: 0.5rem;
-}
+  font-weight: 200;
+  padding: 0.5rem; }
+
 p {
-    padding: 0.5rem;
-}
+  padding: 0.5rem; }
+
 a {
-    text-decoration: none;
-    color: var(--mainColor);
-}
+  text-decoration: none;
+  color: #333; }
 
 /*Section Styles*/
 li {
-    list-style-type: none;
-}
-li a {
+  list-style-type: none; }
+  li a {
     display: block;
     text-decoration: none;
-    padding: 0.5rem;
-}
-li a:hover {
-    background-color: #eee;
-}
+    padding: 0.5rem; }
+  li a:hover {
+    background-color: #eee; }
+
 .secondary {
-    font-size: 70%;
-    font-style: italic;
-    color: #666;
-    padding-left: 0.7rem;
-}
+  font-size: 70%;
+  font-style: italic;
+  color: #666;
+  padding-left: 0.7rem; }
 
 /* Form Styles */
 form {
-    padding: 0.5rem;
-}
+  padding: 0.5rem; }
+
 input, label, button, select {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem; }
+
 input {
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-weight: 200;
-    border: none;
-    border-bottom: 1px solid;
-}
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 200;
+  border: none;
+  border-bottom: 1px solid; }
+
 button {
-    border: none;
-    background-color: #eee;
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-weight: 200;
-}
+  border: none;
+  background-color: #eee;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 200; }
+
 select {
-    border: none;
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-weight: 200;
-}
+  border: none;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 200; }
+
 .remember {
-    width: auto;
-    display: inline-block;
-    margin-right: 0.5rem;
-}
+  width: auto;
+  display: inline-block;
+  margin-right: 0.5rem; }
+
 .error {
-    background-color: #ffd6cc;
-    border-left: 2px solid #ff3300;
-    margin-left: 0.5rem;
-}
+  background-color: #ffd6cc;
+  border-left: 2px solid #ff3300;
+  margin-left: 0.5rem; }
 
 /*Header & Footer*/
 nav a {
-    display: inline-block;
-    padding: 0.5rem;
-    text-decoration: none;
-}
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none; }
+
 nav a:hover {
-    background-color: #eee;
-}
+  background-color: #eee; }
+
 footer a {
-    text-decoration: none;
-    font-size: 0.5rem;
-    padding: 0.5rem;
-}
+  text-decoration: none;
+  font-size: 0.5rem;
+  padding: 0.5rem; }
 
 /*Media Queries*/
 @media (max-width: 400px) {
-    nav a {
-        display: block;
-        width: 100%;
-    }
-
-}
+  nav a {
+    display: block;
+    width: 100%; } }

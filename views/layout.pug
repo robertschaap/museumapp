@@ -13,8 +13,7 @@ html(class='no-js' lang='en')
       link(rel='icon' type='image/png' href='images/favicon.png' sizes='32x32')
 
   body
-    block body
-      header(role='heading')
+    header(role='heading')
         h1 Museum App
         nav(role='navigation')
           block navigation
@@ -22,9 +21,9 @@ html(class='no-js' lang='en')
             a(href='/museums') Museums
             a(href='/artworks') Artworks
 
-      block content
+    block content
 
-      footer(role='contentinfo')
-        a(href='/admin') Admin
-      script(src='https://code.jquery.com/jquery-3.2.1.js')
-      script(type='text/javascript', src='/scripts/javascript.js')
+    footer(role='contentinfo')
+      a(href='/admin') Admin
+    script(src='https://code.jquery.com/jquery-3.2.1.js')
+    script(type='text/javascript', src='/scripts/javascript.js')
