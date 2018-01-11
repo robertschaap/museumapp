@@ -2,7 +2,7 @@
 A simple application that tests REST and MVC principles as well as user authentication and session management.
 
 ##### Technologies
-HTML5 | CSS3 | JavasScript | Node.js | Express | Pug | PostgreSQL | Sequelize
+HTML5 | CSS3 | JavasScript | Node.js | Express | Pug | PostgreSQL | Sequelize    
 Express-Session | Connect-Session-Sequelize | Body-Parser
 
 ### Scope

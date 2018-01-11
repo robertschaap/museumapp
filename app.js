@@ -19,7 +19,7 @@ app.use(session({
         expiration: 60 * 60000
     }),
     secret: '38-38-40-40-37-39-37-39-66-65-13',
-    saveUnitialized: false,
+    saveUninitialized: false,
     resave: false,
 }));
 
