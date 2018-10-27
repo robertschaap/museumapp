@@ -19,7 +19,6 @@ router.use((req, res, next) => {
 });
 router.use((err, req, res, next) => {
     res.status(err.status || 500);
-    console.log(err.status)
     res.render('error', {
         message: err.message,
         error: err
