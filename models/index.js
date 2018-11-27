@@ -34,8 +34,8 @@ sequelize.sync({ force: true }).then(() => {
 });
 
 // Functions
-function makeMap(obj) {
-  return obj.map(i => i.dataValues);
+function mapDataValues(databaseRows) {
+  return databaseRows.map(i => i.dataValues);
 }
 
 // Exports
@@ -46,17 +46,17 @@ exports.addArtwork = (name, artist, museumId) => {
 };
 
 exports.allMuseums = () => {
-  return Museums.findAll().then(makeMap);
+  return Museums.findAll().then(mapDataValues);
 };
 
 exports.oneMuseum = (id) => {
   return Museums.findAll({
     include: [{ model: Artworks, where: { museumId: id } }]
-  }).then(makeMap);
+  }).then(mapDataValues);
 };
 
 exports.allArtworks = () => {
-  return Artworks.findAll().then(makeMap);
+  return Artworks.findAll().then(mapDataValues);
 };
 
 exports.oneArtwork = (id) => {
@@ -65,7 +65,7 @@ exports.oneArtwork = (id) => {
 
 exports.queryAdmin = () => {
   return Promise.all([
-    Museums.findAll().then(makeMap),
-    Artworks.findAll().then(makeMap)
+    Museums.findAll().then(mapDataValues),
+    Artworks.findAll().then(mapDataValues)
   ]);
 };
