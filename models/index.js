@@ -11,6 +11,7 @@ const Museums = sequelize.define('museums', {
   name: { type: Sequelize.TEXT, unique: true},
   location: Sequelize.TEXT
 });
+
 const Artworks = sequelize.define('artworks', {
   name: { type: Sequelize.TEXT, unique: true},
   artist: Sequelize.TEXT
@@ -43,20 +44,25 @@ exports.sequelize = sequelize;
 exports.addArtwork = (name, artist, museumId) => {
   return Artworks.create({ name: name, artist: artist, museumId: museumId });
 };
+
 exports.allMuseums = () => {
   return Museums.findAll().then(makeMap);
 };
+
 exports.oneMuseum = (id) => {
   return Museums.findAll({
     include: [{ model: Artworks, where: { museumId: id } }]
   }).then(makeMap);
 };
+
 exports.allArtworks = () => {
   return Artworks.findAll().then(makeMap);
 };
+
 exports.oneArtwork = (id) => {
   return Artworks.findById(id);
 };
+
 exports.queryAdmin = () => {
   return Promise.all([
     Museums.findAll().then(makeMap),
