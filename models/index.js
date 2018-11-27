@@ -42,7 +42,7 @@ function makeMap(obj) {
 exports.sequelize = sequelize;
 
 exports.addArtwork = (name, artist, museumId) => {
-  return Artworks.create({ name: name, artist: artist, museumId: museumId });
+  return Artworks.create({ name, artist, museumId });
 };
 
 exports.allMuseums = () => {
