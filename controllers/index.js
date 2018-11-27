@@ -17,6 +17,7 @@ router.use((req, res, next) => {
   err.status = 404;
   next(err);
 });
+
 router.use((err, req, res) => {
   res.status(err.status || 500);
   res.render('error', {
