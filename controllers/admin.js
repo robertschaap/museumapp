@@ -9,17 +9,22 @@ router.get('/', (req, res) => {
     res.redirect('/admin/login');
   } else {
     db.queryAdmin()
-    .then(query => res.render('admin', { museums: query[0], artworks: query[1], message: req.query.message }));
+    .then(query => res.render('admin', {
+      museums: query[0],
+      artworks: query[1],
+      message: req.query.message
+    }));
   }
 });
 
 router.get('/login', (req, res) => {
-  res.render('login', { message: req.query.message });
+  res.render('login', {
+    message: req.query.message
+  });
 });
 
 router.post('/login', (req, res) => {
-  let name = req.body.name;
-  let password = req.body.password;
+  const { name, password } = req.body;
 
   if (name === 'admin' && password === 'admin') {
     req.session.admin = 1;
