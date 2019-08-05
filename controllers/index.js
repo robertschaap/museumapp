@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 // Error Handler
 router.use((req, res, next) => {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
