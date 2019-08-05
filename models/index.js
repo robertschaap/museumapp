@@ -34,9 +34,7 @@ sequelize.sync({ force: true }).then(() => {
 });
 
 // Functions
-function mapDataValues(databaseRows) {
-  return databaseRows.map(i => i.dataValues);
-}
+const mapDataValues = rows => rows.map(i => i.dataValues);
 
 // Exports
 exports.sequelize = sequelize;
