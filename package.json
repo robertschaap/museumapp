@@ -1,5 +1,5 @@
 {
-  "name": "museum",
+  "name": "museum_node-express",
   "version": "1.0.0",
   "description": "simple app that tests restful routing as well as mvc basics and user sessions",
   "main": "app.js",
